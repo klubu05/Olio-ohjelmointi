@@ -15,8 +15,6 @@ class Peikko:
     Julkiset metodit
         arvo_hurraus()
     """
-class Sankari:
-    
 
     NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
@@ -59,7 +57,11 @@ class Sankari:
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
 
-### Kirjoita luokka Sankari tähän.
+class Sankari:
+    def __init__(self):
+        self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
+        self.rohkeus = random.randint(4, 8)
+        self.katseen_voima = random.randint(2, 4)
 
 
 def hurraa(olio):

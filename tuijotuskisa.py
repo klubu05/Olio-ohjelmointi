@@ -15,6 +15,8 @@ class Peikko:
     Julkiset metodit
         arvo_hurraus()
     """
+class Sankari:
+    
 
     NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")

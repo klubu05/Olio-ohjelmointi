@@ -56,44 +56,14 @@ class Peikko:
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
-
 class Sankari:
-    def __init__(self):
-        self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(4, 8)
-        self.katseen_voima = random.randint(2, 4)
-
-    def _arvo_sanat(self, tavut, n, erotin, p=0.5):
-        """Muodostaa satunnaisen tekstin annetuista tavuista.
-
-        :param tavut: ne tavut, joita palautettava teksti voi sisältää
-        :type tavut: Union[list[str], tuple[str]]
-        :param n: mukaan poimittavien tavujen maksimimäärä
-        :type n: int
-        :param erotin: tavujen väliin satunnaisesti laitettava merkki
-        :type erotin: str
-        :param p: todennäköisyys lisätä erotin tavujen väliin (oletus 0.5)
-        :type p: float
-        :return: satunnainen teksti
-        :rtype: str
-        """
-        osat = random.choices(tavut, k=random.randint(2, n))
-        sanat = osat[0]
-        for osa in osat[1:]:
-            if random.random() < p:
-                sanat += erotin + osa
-            else:
-                sanat += osa.lower()
-        return sanat
-    
+    __HURRAUKSET = ("Jee", "jihppii", "MMMMMH", "RAWRRRR", "GÖRRRR", "MURINAA")
+    def __init__(self, nimi):
+        self.nimi = nimi
+        self.rohkeus = random.randint(5, 9)
+        self.katseen_voima = random.randint(5, 9)
     def arvo_hurraus(self):
-        """Palauttaa satunnaisen hurraushuudahduksen.
-
-        :return: hurraava huudahdus
-        :rtype: str
-        """
-        return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
-
+        return random.choice(self.__HURRAUKSET)
 
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.

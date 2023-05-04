@@ -64,6 +64,7 @@ class Peikko(Olento):
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
+    #tätä muokkasin
 class Sankari(Olento):
     __HURRAUKSET = ("Jee", "jihppii", "MMMMMH", "RAWRRRR", "GÖRRRR", "MURINAA")
     def __init__(self, nimi):
@@ -76,7 +77,7 @@ class Sankari(Olento):
 
 
 
-
+# tämä on itsetehty
 class Vuorenpeikko(Peikko):
     NIMITAVUT = ("Uh", "Gah", "Ghah", "Guh", "Kah", "Katah", "Bah", "Bath", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brah", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
@@ -89,7 +90,7 @@ class Vuorenpeikko(Peikko):
 
         super().__init__(nimi, rohkeus, katseen_voima)
 
-
+# tämä on itse tehty
 class Luolapeikko(Peikko):
     NIMITAVUT = ("Uk", "Gak", "Ghak", "Guk", "Kau", "Katak", "Bak", "Batk", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brak", "Dza", "Grak", "Gurk", "Raku", "Urgh", "Ra")
@@ -102,7 +103,7 @@ class Luolapeikko(Peikko):
 
         super().__init__(nimi, rohkeus, katseen_voima)
 
-
+#tätä on muokattu
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
 

@@ -34,15 +34,46 @@ class Laskija:
         return tulo
 
 
-### Lisää MonenLaskija ja argumenttien_tulostaja tähän.
-class MonenLaskija:
-    def summaa(self, a, b):
-        return sum([a, b])
-    def kerro(self, a, b):
+class MonenLaskija(Laskija):
+    """Luokka, joka perii Laskija-luokan ja tarjoaa uudet metodit useamman luvun summan ja tulon laskemiseksi.
+
+    Julkiset metodit:
+        summaa(*args)
+        kerro(*args)
+    """
+
+    def summaa(self, *args):
+        """Palauttaa annettujen lukujen summan.
+
+        :param args: summattavat luvut
+        :type args: Union[int, float]
+        :return: annettujen lukujen summa
+        :rtype: Union[int, float]
+        """
+        return sum(args)
+
+    def kerro(self, *args):
+        """Palauttaa annettujen lukujen tulon.
+
+        :param args: kerrottavat luvut
+        :type args: Union[int, float]
+        :return: annettujen lukujen tulo
+        :rtype: Union[int, float]
+        """
         tulo = 1
-        for luku in [a, b]:
+        for luku in args:
             tulo *= luku
         return tulo
+
+
+def argumenttien_tulostaja(**kwargs):
+    """Tulostaa avainsanojen ja niitä vastaavien arvojen listan.
+
+    :param kwargs: avainsana-argumentit
+    :type kwargs: Dict[str, Any]
+    """
+    for avainsana, arvo in kwargs.items():
+        print(f'Argumentin "{avainsana}" arvo on {arvo}.')
 
 
 

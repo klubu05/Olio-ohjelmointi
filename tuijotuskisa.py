@@ -196,3 +196,22 @@ while sankari.rohkeus > 0:
 
 time.sleep(1.5)
 print("%s herää sängystään hikisenä - onneksi se oli vain unta!" % sankari.nimi)
+
+# Luokka Olento määrittelee yleisen olentojen luokan, jossa on attribuutit nimi, rohkeus ja katseen_voima. Tämä luokka on periytetty muille olentoluokille.
+#Luokka Peikko perii luokan Olento ja lisää sille ominaisuuksia. Luokassa määritellään myös kaksi luokka-attribuuttia NIMITAVUT ja RIEMUTAVUT, jotka sisältävät satunnaisesti valittavia nimi- ja hurraustavuja peikolle.
+#Luokassa Peikko on metodi _arvo_sanat, joka luo satunnaisen tekstin annetuista tavuista ja erotinmerkistä.
+#Luokassa Peikko on metodi arvo_hurraus, joka palauttaa satunnaisen hurraushuudahduksen käyttäen luokan RIEMUTAVUT-attribuuttia.
+#Luokka Sankari perii luokan Olento ja määrittelee sille omat ominaisuudet. Luokalla on myös metodi arvo_hurraus, joka palauttaa satunnaisen hurraushuudahduksen käyttäen luokan __HURRAUKSET-attribuuttia.
+#Luokka Vuorenpeikko perii luokan Peikko ja lisää sille oman luokka-attribuutin NIMITAVUT, joka sisältää satunnaisesti valittavia nimitavuja vuorenpeikolle.
+#Luokka Luolapeikko perii luokan Peikko ja lisää sille oman luokka-attribuutin NIMITAVUT, joka sisältää satunnaisesti valittavia nimitavuja luolapeikolle.
+#Funktio hurraa tulostaa satunnaisen hurrauksen annetulle oliolle käyttäen olion arvo_hurraus-metodia.
+#Funktio tulosta_rapaytys tulostaa sopivan tekstin silmiään räpäyttävälle oliolle.
+#Funktio tuijota asettaa kaksi annettua oliota tuijottamaan toisiaan yhden kierroksen ajan. Tuijotuksen tuloksena arvotaan kummankin olion vahvuudet ja heikompi menettää rohkeutta riippuen vahvuuksista.
+#Funktio taistele asettaa kaksi annettua oliota taistelemaan keskenään kunnes toinen voittaa. Taistelu tapahtuu toistamalla tuijotuskierroksia, kunnes toisen olion rohkeus menee alle nollan.
+#Koodissa luodaan Sankari-olio nimellä, jonka käyttäjä syöttää.
+#Koodissa suoritetaan toistolause, joka jatkuu niin kauan kuin sankarin rohkeus on suurempi kuin nolla.
+#Joka kierroksella arvotaan vastaan tuleva peikko (joko Vuorenpeikko, Peikko tai Luolapeikko).
+#Kutsutaan taistele-funktiota peikon ja sankarin välillä.
+#Tulostetaan voittajan hurraushuuto.
+#Lopuksi tulostetaan viesti sankarin heräämisestä unesta.
+#Yleisesti ottaen koodi luo olioluokkia (Olento, Peikko, Sankari, Vuorenpeikko, Luolapeikko) ja käyttää niitä simuloimaan tuijotusta ja taistelua peikkojen ja sankarin välillä. Olioluokissa määritellään ominaisuuksia ja metodeja, joita käytetään toiminnan toteuttamiseen.
